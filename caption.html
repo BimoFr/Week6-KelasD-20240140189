@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caption</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="tabs" aria-label="Menu utama">
+    <a href="index.html" class="tab">Etalase</a>
+    <a href="caption.html" class="tab is-active" aria-current="page">Caption</a>
+  </nav>
+
+  <main>
+    <section id="panel-caption" class="panel">
+      <form id="caption-form" class="card" novalidate>
+        <div class="field">
+          <label for="nama">Nama produk</label>
+          <input type="text" id="nama" name="nama" placeholder="contoh: Kopi Susu Gula Aren" autocomplete="off">
+          <small class="error" id="nama-error" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="harga">Harga</label>
+          <input type="text" id="harga" name="harga" inputmode="numeric" placeholder="contoh: 25000" autocomplete="off">
+          <small class="error" id="harga-error" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="template">Template</label>
+          <select id="template" name="template">
+            <option value="promo">Promo</option>
+            <option value="baru">Produk baru</option>
+            <option value="terbatas">Stok terbatas</option>
+            <option value="testimoni">Testimoni</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn">Buat caption</button>
+
+        <div class="field">
+          <label for="hasil">Hasil caption</label>
+          <textarea id="hasil" rows="10" readonly></textarea>
+          <div class="result-bar">
+            <span id="counter">0 karakter</span>
+            <button type="button" id="copy" class="btn btn--small" disabled>Salin</button>
+          </div>
+          <p id="feedback" class="status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="caption.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etalase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="tabs" aria-label="Menu utama">
+    <a href="index.html" class="tab is-active" aria-current="page">Etalase</a>
+    <a href="caption.html" class="tab">Caption</a>
+  </nav>
+
+  <main>
+    <section id="panel-etalase" class="panel">
+      <div class="card card--wide">
+        <div class="toolbar">
+          <div class="toolbar__search">
+            <label for="search">Cari produk</label>
+            <input type="search" id="search" placeholder="contoh: phone" autocomplete="off">
+          </div>
+          <div class="toolbar__filter">
+            <label for="category-filter">Kategori</label>
+            <select id="category-filter">
+              <option value="all">Semua Kategori</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <button type="button" id="retry" class="btn btn--small" hidden>Coba lagi</button>
+
+        <ul id="product-list" class="products"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="etalase.js"></script>
+</body>
+</html>
